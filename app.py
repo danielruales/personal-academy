@@ -4,6 +4,11 @@ import warnings
 import os
 from personal_academy.src.personal_academy.crew import PersonalAcademy
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import sqlite3
+
 # Suppress warnings
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
