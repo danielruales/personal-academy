@@ -89,63 +89,63 @@ class PersonalAcademy():
 	def outline_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['outline_task'],
-			output_file='outline.md'
+			output_file='outputs/outline.md'
 		)
 	
 	@task
 	def research_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['research_task'],
-			output_file='research.md'
+			output_file='outputs/research.md'
 		)
 	
 	@task
 	def reporting_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			output_file='outputs/report.md'
 		)
 	
 	@task
 	def write_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['write_task'],
-			output_file='course_content.md'
+			output_file='outputs/course_content.md'
 		)
 	
 	@task
 	def lecture_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['lecture_task'],
-			output_file='course_transcript.md'
+			output_file='outputs/course_transcript.md'
 		)
 
 	@task
 	def review_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['review_task'],
-			output_file='review.md'
+			output_file='outputs/review.md'
 		)
 	
 	@task
 	def homework_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['homework_task'],
-			output_file='homework.md'
+			output_file='outputs/homework.md'
 		)
 	
 	@task
 	def quiz_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['quiz_task'],
-			output_file='quiz.md'
+			output_file='outputs/quiz.md'
 		)
 	
 	@task
 	def feedback_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['feedback_task'],
-			output_file='feedback.md'
+			output_file='outputs/feedback.md'
 		)
 
 	@crew

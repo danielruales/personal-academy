@@ -36,7 +36,7 @@ write_task:
     Make sure to use the outline as a guide but also add your own personal touch to it.
   expected_output: >
     The personalized course content for {topic}.
-    Each topic of each section should have 3 paragraphs of information to learn about the topic.
+    Each topic of each section should have 10 paragraphs of information to learn about the topic.
     Formatted as markdown without '```'
   agent: course_writer
 
