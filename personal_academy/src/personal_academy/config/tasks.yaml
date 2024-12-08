@@ -10,6 +10,17 @@ outline_task:
     Formatted as markdown without '```'
   agent: professor
 
+outline_json_task:
+  description: >
+    Convert the outline of the personalized course for {topic} to a JSON format.
+  expected_output: >
+    The outline of the personalized course for {topic} in JSON format.
+    Chapters should be the highest level of the JSON hierarchy as an array.
+    Sections should be the second level of the JSON hierarchy as an array.
+    Each section should be a string with the entire content of the section.
+    Formatted as JSON without '```'
+  agent: professor
+
 research_task:
   description: >
     Conduct a thorough research about {topic} for the personalized course outline given by the professor based on the student's experience.

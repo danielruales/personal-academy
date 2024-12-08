@@ -1,6 +1,9 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
+# from crewai_tools import FirecrawlSearchTool
+# import json
+
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
@@ -34,9 +37,12 @@ class PersonalAcademy():
 
 	@agent
 	def researcher(self) -> Agent:
+		# tool = FirecrawlSearchTool(query='what is firecrawl?', search_options={'limit': 3})
+
 		return Agent(
 			config=self.agents_config['researcher'],
-			verbose=True
+			verbose=True,
+			# tools=[tool]
 		)
 
 	@agent
@@ -93,6 +99,13 @@ class PersonalAcademy():
 		)
 	
 	@task
+	def outline_json_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['outline_json_task'],
+			output_file='outputs/outline.json'
+		)
+	
+	@task
 	def research_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['research_task'],
@@ -120,12 +133,12 @@ class PersonalAcademy():
 			output_file='outputs/course_transcript.md'
 		)
 
-	@task
-	def review_task(self) -> Task:
-		return Task(
-			config=self.tasks_config['review_task'],
-			output_file='outputs/review.md'
-		)
+	# @task
+	# def review_task(self) -> Task:
+	# 	return Task(
+	# 		config=self.tasks_config['review_task'],
+	# 		output_file='outputs/review.md'
+	# 	)
 	
 	@task
 	def homework_task(self) -> Task:
