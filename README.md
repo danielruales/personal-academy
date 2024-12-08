@@ -9,7 +9,9 @@ Courses are created by AI agents that are able to generate content, review and g
 - put your OpenAI API key and model name in the `.env` file in the `personal_academy/` folder
 
 example:
+
 `MODEL=gpt-4o-mini`
+
 `OPENAI_API_KEY=sk-proj-...`
 - `streamlit run app.py`
 
