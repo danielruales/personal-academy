@@ -1,0 +1,20 @@
+[project]
+name = "personal_academy"
+version = "0.1.0"
+description = "personal-academy using crewAI"
+authors = [{ name = "Daniel Ruales", email = "danielruales@gmail.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0"
+]
+
+[project.scripts]
+personal_academy = "personal_academy.main:run"
+run_crew = "personal_academy.main:run"
+train = "personal_academy.main:train"
+replay = "personal_academy.main:replay"
+test = "personal_academy.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

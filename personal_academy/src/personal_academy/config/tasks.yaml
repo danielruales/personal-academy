@@ -1,0 +1,90 @@
+outline_task:
+  description: >
+    Create an outline of a personalized course for {topic} based on the student's experience.
+    The student's experience is {experience}.
+  expected_output: >
+    The outline of the personalized course for {topic}.
+    The outline should be 10 chapters.
+    Each chapter should have a title and 3 sections.
+    Each section should have a short description and a list of 3 topics.
+    Formatted as markdown without '```'
+  agent: professor
+
+research_task:
+  description: >
+    Conduct a thorough research about {topic} for the personalized course outline given by the professor based on the student's experience.
+    The student's experience is {experience}.
+    Make sure you find any interesting and relevant information given the current year is 2024.
+  expected_output: >
+    Bullet points of the most relevant information about {topic} for the personalized course outline given by the professor based on the student's experience.
+    Each section should have a short description and a list of 5 topics.
+    Formatted as markdown without '```'
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+  expected_output: >
+    A fully fledge reports with the mains topics, each with a full section of information.
+    Formatted as markdown without '```'
+  agent: reporting_analyst
+
+write_task:
+  description: >
+    Write the personalized course for {topic} based on the personalized course outline given by the professor and the research done by the researcher.
+    Make sure to use the outline as a guide but also add your own personal touch to it.
+  expected_output: >
+    The personalized course content for {topic}.
+    Each topic of each section should have 3 paragraphs of information to learn about the topic.
+    Formatted as markdown without '```'
+  agent: course_writer
+
+lecture_task:
+  description: >
+    Lecture the personalized course for {topic} based on the personalized course written by the course writer.
+  expected_output: >
+    The personalized course verbal transcript for {topic}.
+    Formatted as text in the form of a lecture script.
+  agent: course_lecturer
+
+homework_task:
+  description: >
+    Create homework for the personalized course for {topic} based on the personalized course written by the course writer.
+    Make sure the homework is challenging and informative according to the student's experience.
+  expected_output: >
+    The personalized course homework for {topic}.
+    Each section should have 3 homework questions that is related to the section.
+    Don't create homework questions that are only used for projects or capstones.
+    Put the answers in the end of the homework.
+    Formatted as markdown without '```'
+  agent: homework_creator
+
+quiz_task:
+  description: >
+    Create quizzes for the personalized course for {topic} based on the personalized course written by the course writer and the assigned homework.
+  expected_output: >
+    The personalized course quizzes for {topic}.
+    Each chapter should have 1 quiz.
+    Each quiz should have 5 questions and 4 options for each question.
+    Each question should be related to the homework and section.
+    Don't create quiz sections that are only used for projects or capstones.
+    Put the answers in the end of the quiz.
+    Formatted as markdown without '```'
+  agent: quiz_creator
+
+review_task:
+  description: >
+    Review the student's work for the personalized course for {topic} based on the personalized course transcript.
+  expected_output: >
+    Notes on the student's work for the personalized course for {topic}.
+    Formatted as markdown without '```'
+  agent: teaching_assistant
+
+feedback_task:
+  description: >
+    Provide feedback on the student's work for the personalized course for {topic} based on the notes from the teaching assistant.
+  expected_output: >
+    Feedback on the student's work for the personalized course for {topic}.
+    Formatted as markdown without '```'
+  agent: teaching_assistant
