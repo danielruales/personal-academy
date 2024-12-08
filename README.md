@@ -4,9 +4,18 @@ Institutional forms of learning aren't accessible to everyone, slow, expensive a
 PersonalAcademy is a platform that allows you to learn at your own pace, in your own time, and on your own schedule.
 Courses are created by AI agents that are able to generate content, review and grade your work, and provide feedback.
 
+## How to run:
+- `pip install crewai streamlit`
+- put your OpenAI API key and model name in the `.env` file in the `personal_academy/` folder
+
+example:
+`MODEL=gpt-4o-mini`
+`OPENAI_API_KEY=sk-proj-...`
+- `streamlit run app.py`
+
 ## Agents Involved
 
-### Advisor
+### Advisor (not implemented yet)
 The advisor will take your input of what you want to learn and your experience to help guide you on what you should learn.
 Tasks:
 - Take your input and workshop the difficulty and structure of the course based on your experience.
@@ -42,12 +51,12 @@ The course quiz creator will work with the course writer to create quizzes for t
 Tasks:
 - Create quizzes for the personalized course for you.
 
-### Teaching Assistant
+### Teaching Assistant (not implemented yet)
 The teaching assistant will work with the professor and student to review the student's work, answer questions and provide feedback.
 Tasks:
 - Review the student's work.
 - Answer questions.
 - Provide feedback.
 
-## Student-in-the-loop
+## Student-in-the-loop (not implemented yet)
 The student will consume the course and provide feedback to the professor so the course can be improved.
