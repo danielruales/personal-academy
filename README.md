@@ -6,7 +6,7 @@ Courses are created by AI agents that are able to generate content, review and g
 
 ## How to run:
 - `pip install crewai streamlit`
-- put your OpenAI API key and model name in the `.env` file in the `personal_academy/` folder
+- put your OpenAI API key and model name in the `.env` file in the root folder
 
 example:
 
