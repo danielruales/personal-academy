@@ -141,12 +141,12 @@ class PersonalAcademy():
 			output_file='outputs/quiz.md'
 		)
 	
-	@task
-	def feedback_task(self) -> Task:
-		return Task(
-			config=self.tasks_config['feedback_task'],
-			output_file='outputs/feedback.md'
-		)
+	# @task
+	# def feedback_task(self) -> Task:
+	# 	return Task(
+	# 		config=self.tasks_config['feedback_task'],
+	# 		output_file='outputs/feedback.md'
+	# 	)
 
 	@crew
 	def crew(self) -> Crew:
