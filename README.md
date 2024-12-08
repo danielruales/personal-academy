@@ -17,6 +17,8 @@ example:
 
 ## Agents Involved
 
+![Agent Workflow](images/agent_workflow.png)
+
 ### Advisor (not implemented yet)
 The advisor will take your input of what you want to learn and your experience to help guide you on what you should learn.
 Tasks:
